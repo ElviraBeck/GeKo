@@ -1,0 +1,350 @@
+<Effect>
+    <Emitter>
+        <OutputType>0</OutputType>
+        <Position x="0" y="0.5" z="1"/>
+        <EmitterLifetime>0</EmitterLifetime>
+        <EmitFrequency>1.5</EmitFrequency>
+        <ParticlesPerEmit>1</ParticlesPerEmit>
+        <ParticleLiftime>10</ParticleLiftime>
+        <ParticleMortal>1</ParticleMortal>
+        <UseGeometryShader>1</UseGeometryShader>
+        <Velocity>4</Velocity>
+        <Physic>
+            <PointGravity>
+                <Gravity x="0" y="-1" z="0" w="-0"/>
+                <Speed>0.62</Speed>
+                <GravityRange>0</GravityRange>
+                <GravityFunction>0</GravityFunction>
+            </PointGravity>
+        </Physic>
+        <AreaEmitter on="0"/>
+        <Texture>
+            <Tex>/ParticleSystem/comicCloud/cloud01.png</Tex>
+            <Scaling>
+                <UseTexture>1</UseTexture>
+                <ScalingSize>
+                    <Item>0.80000001</Item>
+                    <Item>1.6</Item>
+                </ScalingSize>
+                <ScalingMoment>
+                    <Item>0</Item>
+                    <Item>1</Item>
+                </ScalingMoment>
+                <BirthTime>0.40000001</BirthTime>
+                <DeathTime>4</DeathTime>
+				<BlendingTime>0</BlendingTime>
+                <RotateLeft>0</RotateLeft>
+                <RotationSpeed>0.30000001</RotationSpeed>
+            </Scaling>
+        </Texture>
+    </Emitter>
+    <Emitter>
+        <OutputType>0</OutputType>
+        <Position x="0" y="0.5" z="1"/>
+        <EmitterLifetime>0</EmitterLifetime>
+        <EmitFrequency>2.0999999046325684</EmitFrequency>
+        <ParticlesPerEmit>1</ParticlesPerEmit>
+        <ParticleLiftime>10</ParticleLiftime>
+        <ParticleMortal>1</ParticleMortal>
+        <UseGeometryShader>1</UseGeometryShader>
+        <Velocity>4</Velocity>
+        <Physic>
+            <PointGravity>
+                <Gravity x="0" y="-1" z="0" w="-0"/>
+                <Speed>0.5</Speed>
+                <GravityRange>0</GravityRange>
+                <GravityFunction>0</GravityFunction>
+            </PointGravity>
+        </Physic>
+        <AreaEmitter on="0"/>
+        <Texture>
+            <Tex>/ParticleSystem/comicCloud/cloud03.png</Tex>
+            <Scaling>
+                <UseTexture>1</UseTexture>
+                <ScalingSize>
+                    <Item>0.80000001</Item>
+                    <Item>1.6</Item>
+                </ScalingSize>
+                <ScalingMoment>
+                    <Item>0</Item>
+                    <Item>1</Item>
+                </ScalingMoment>
+                <BirthTime>0.40000001</BirthTime>
+                <DeathTime>4</DeathTime>
+				<BlendingTime>0</BlendingTime>
+                <RotateLeft>0</RotateLeft>
+                <RotationSpeed>0.30000001</RotationSpeed>
+            </Scaling>
+        </Texture>
+    </Emitter>
+    <Emitter>
+        <OutputType>1</OutputType>
+        <Position x="-1" y="1" z="1"/>
+        <EmitterLifetime>0</EmitterLifetime>
+        <EmitFrequency>0</EmitFrequency>
+        <ParticlesPerEmit>1</ParticlesPerEmit>
+        <ParticleLiftime>0</ParticleLiftime>
+        <ParticleMortal>0</ParticleMortal>
+        <UseGeometryShader>1</UseGeometryShader>
+        <Velocity>0</Velocity>
+        <Physic>
+            <DirectionGravity>
+                <Gravity x="0" y="-1" z="0" w="1"/>
+                <Speed>0</Speed>
+            </DirectionGravity>
+        </Physic>
+        <AreaEmitter on="0"/>
+        <Texture>
+            <Tex>/ParticleSystem/comicCloud/balloon04.png</Tex>
+            <Size>
+                <UseTexture>1</UseTexture>
+                <ParticleSize>0.80000001</ParticleSize>
+                <BirthTime>2</BirthTime>
+                <DeathTime>0</DeathTime>
+				<BlendingTime>0</BlendingTime>
+                <RotateLeft>0</RotateLeft>
+                <RotationSpeed>0</RotationSpeed>
+            </Size>
+        </Texture>
+    </Emitter>
+    <Emitter>
+        <OutputType>1</OutputType>
+        <Position x="2.8000002" y="2" z="1"/>
+        <EmitterLifetime>0</EmitterLifetime>
+        <EmitFrequency>0</EmitFrequency>
+        <ParticlesPerEmit>1</ParticlesPerEmit>
+        <ParticleLiftime>0</ParticleLiftime>
+        <ParticleMortal>0</ParticleMortal>
+        <UseGeometryShader>1</UseGeometryShader>
+        <Velocity>0</Velocity>
+        <Physic>
+            <DirectionGravity>
+                <Gravity x="0" y="-1" z="0" w="1"/>
+                <Speed>0</Speed>
+            </DirectionGravity>
+        </Physic>
+        <AreaEmitter on="0"/>
+        <Texture>
+            <Tex>/ParticleSystem/comicCloud/star02.png</Tex>
+            <Size>
+                <UseTexture>1</UseTexture>
+                <ParticleSize>0.30000001</ParticleSize>
+                <BirthTime>2</BirthTime>
+                <DeathTime>0</DeathTime>
+				<BlendingTime>0</BlendingTime>
+                <RotateLeft>0</RotateLeft>
+                <RotationSpeed>0.60000002</RotationSpeed>
+            </Size>
+        </Texture>
+    </Emitter>
+    <Emitter>
+        <OutputType>1</OutputType>
+        <Position x="-1" y="-1" z="1"/>
+        <EmitterLifetime>0</EmitterLifetime>
+        <EmitFrequency>0</EmitFrequency>
+        <ParticlesPerEmit>1</ParticlesPerEmit>
+        <ParticleLiftime>0</ParticleLiftime>
+        <ParticleMortal>0</ParticleMortal>
+        <UseGeometryShader>1</UseGeometryShader>
+        <Velocity>0</Velocity>
+        <Physic>
+            <DirectionGravity>
+                <Gravity x="0" y="-1" z="0" w="1"/>
+                <Speed>0</Speed>
+            </DirectionGravity>
+        </Physic>
+        <AreaEmitter on="0"/>
+        <Texture>
+            <Tex>/ParticleSystem/comicCloud/star02.png</Tex>
+            <Size>
+                <UseTexture>1</UseTexture>
+                <ParticleSize>0.5</ParticleSize>
+                <BirthTime>2</BirthTime>
+                <DeathTime>0</DeathTime>
+				<BlendingTime>0</BlendingTime>
+                <RotateLeft>1</RotateLeft>
+                <RotationSpeed>0.40000001</RotationSpeed>
+            </Size>
+        </Texture>
+    </Emitter>
+    <Emitter>
+        <OutputType>1</OutputType>
+        <Position x="2.3000002" y="0.2" z="1"/>
+        <EmitterLifetime>0</EmitterLifetime>
+        <EmitFrequency>0</EmitFrequency>
+        <ParticlesPerEmit>1</ParticlesPerEmit>
+        <ParticleLiftime>0</ParticleLiftime>
+        <ParticleMortal>0</ParticleMortal>
+        <UseGeometryShader>1</UseGeometryShader>
+        <Velocity>0</Velocity>
+        <Physic>
+            <DirectionGravity>
+                <Gravity x="0" y="-1" z="0" w="1"/>
+                <Speed>0</Speed>
+            </DirectionGravity>
+        </Physic>
+        <AreaEmitter on="0"/>
+        <Texture>
+            <Tex>/ParticleSystem/comicCloud/spiral05.png</Tex>
+            <Size>
+                <UseTexture>1</UseTexture>
+                <ParticleSize>0.30000001</ParticleSize>
+                <BirthTime>2</BirthTime>
+                <DeathTime>0</DeathTime>
+				<BlendingTime>0</BlendingTime>
+                <RotateLeft>0</RotateLeft>
+                <RotationSpeed>0</RotationSpeed>
+            </Size>
+        </Texture>
+    </Emitter>
+    <Emitter>
+        <OutputType>1</OutputType>
+        <Position x="-2" y="0.69999999" z="1"/>
+        <EmitterLifetime>0</EmitterLifetime>
+        <EmitFrequency>0</EmitFrequency>
+        <ParticlesPerEmit>1</ParticlesPerEmit>
+        <ParticleLiftime>0</ParticleLiftime>
+        <ParticleMortal>0</ParticleMortal>
+        <UseGeometryShader>1</UseGeometryShader>
+        <Velocity>0</Velocity>
+        <Physic>
+            <DirectionGravity>
+                <Gravity x="0" y="-1" z="0" w="1"/>
+                <Speed>0</Speed>
+            </DirectionGravity>
+        </Physic>
+        <AreaEmitter on="0"/>
+        <Texture>
+            <Tex>/ParticleSystem/comicCloud/spiral03.png</Tex>
+            <Size>
+                <UseTexture>1</UseTexture>
+                <ParticleSize>0.30000001</ParticleSize>
+                <BirthTime>2</BirthTime>
+                <DeathTime>0</DeathTime>
+				<BlendingTime>0</BlendingTime>
+                <RotateLeft>0</RotateLeft>
+                <RotationSpeed>0</RotationSpeed>
+            </Size>
+        </Texture>
+    </Emitter>
+    <Emitter>
+        <OutputType>1</OutputType>
+        <Position x="-1.9000001" y="2.0999999" z="1"/>
+        <EmitterLifetime>0</EmitterLifetime>
+        <EmitFrequency>0</EmitFrequency>
+        <ParticlesPerEmit>1</ParticlesPerEmit>
+        <ParticleLiftime>0</ParticleLiftime>
+        <ParticleMortal>0</ParticleMortal>
+        <UseGeometryShader>1</UseGeometryShader>
+        <Velocity>0</Velocity>
+        <Physic>
+            <DirectionGravity>
+                <Gravity x="0" y="-1" z="0" w="1"/>
+                <Speed>0</Speed>
+            </DirectionGravity>
+        </Physic>
+        <AreaEmitter on="0"/>
+        <Texture>
+            <Tex>/ParticleSystem/comicCloud/lightning01.png</Tex>
+            <Size>
+                <UseTexture>1</UseTexture>
+                <ParticleSize>0.60000002</ParticleSize>
+                <BirthTime>2</BirthTime>
+                <DeathTime>0</DeathTime>
+				<BlendingTime>0</BlendingTime>
+                <RotateLeft>0</RotateLeft>
+                <RotationSpeed>0</RotationSpeed>
+            </Size>
+        </Texture>
+    </Emitter>
+    <Emitter>
+        <OutputType>1</OutputType>
+        <Position x="2" y="1.4" z="1"/>
+        <EmitterLifetime>0</EmitterLifetime>
+        <EmitFrequency>0</EmitFrequency>
+        <ParticlesPerEmit>1</ParticlesPerEmit>
+        <ParticleLiftime>0</ParticleLiftime>
+        <ParticleMortal>0</ParticleMortal>
+        <UseGeometryShader>1</UseGeometryShader>
+        <Velocity>0</Velocity>
+        <Physic>
+            <DirectionGravity>
+                <Gravity x="0" y="-1" z="0" w="1"/>
+                <Speed>0</Speed>
+            </DirectionGravity>
+        </Physic>
+        <AreaEmitter on="0"/>
+        <Texture>
+            <Tex>/ParticleSystem/comicCloud/lightning04.png</Tex>
+            <Size>
+                <UseTexture>1</UseTexture>
+                <ParticleSize>0.5</ParticleSize>
+                <BirthTime>2</BirthTime>
+                <DeathTime>0</DeathTime>
+				<BlendingTime>0</BlendingTime>
+                <RotateLeft>0</RotateLeft>
+                <RotationSpeed>0</RotationSpeed>
+            </Size>
+        </Texture>
+    </Emitter>
+    <Emitter>
+        <OutputType>1</OutputType>
+        <Position x="2.7" y="0.80000001" z="1"/>
+        <EmitterLifetime>0</EmitterLifetime>
+        <EmitFrequency>0</EmitFrequency>
+        <ParticlesPerEmit>1</ParticlesPerEmit>
+        <ParticleLiftime>0</ParticleLiftime>
+        <ParticleMortal>0</ParticleMortal>
+        <UseGeometryShader>1</UseGeometryShader>
+        <Velocity>0</Velocity>
+        <Physic>
+            <DirectionGravity>
+                <Gravity x="0" y="-1" z="0" w="1"/>
+                <Speed>0</Speed>
+            </DirectionGravity>
+        </Physic>
+        <AreaEmitter on="0"/>
+        <Texture>
+            <Tex>/ParticleSystem/comicCloud/exclamationMark03.png</Tex>
+            <Size>
+                <UseTexture>1</UseTexture>
+                <ParticleSize>0.30000001</ParticleSize>
+                <BirthTime>2</BirthTime>
+                <DeathTime>0</DeathTime>
+				<BlendingTime>0</BlendingTime>
+                <RotateLeft>0</RotateLeft>
+                <RotationSpeed>0</RotationSpeed>
+            </Size>
+        </Texture>
+    </Emitter>
+    <Emitter>
+        <OutputType>1</OutputType>
+        <Position x="-0.5" y="2.4000001" z="1"/>
+        <EmitterLifetime>0</EmitterLifetime>
+        <EmitFrequency>0</EmitFrequency>
+        <ParticlesPerEmit>1</ParticlesPerEmit>
+        <ParticleLiftime>0</ParticleLiftime>
+        <ParticleMortal>0</ParticleMortal>
+        <UseGeometryShader>1</UseGeometryShader>
+        <Velocity>0</Velocity>
+        <Physic>
+            <DirectionGravity>
+                <Gravity x="0" y="-1" z="0" w="1"/>
+                <Speed>0</Speed>
+            </DirectionGravity>
+        </Physic>
+        <AreaEmitter on="0"/>
+        <Texture>
+            <Tex>/ParticleSystem/comicCloud/exclamationMark02.png</Tex>
+            <Size>
+                <UseTexture>1</UseTexture>
+                <ParticleSize>0.5</ParticleSize>
+                <BirthTime>2</BirthTime>
+                <DeathTime>0</DeathTime>
+				<BlendingTime>0</BlendingTime>
+                <RotateLeft>0</RotateLeft>
+                <RotationSpeed>0</RotationSpeed>
+            </Size>
+        </Texture>
+    </Emitter>
+</Effect>

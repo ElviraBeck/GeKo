@@ -19,7 +19,7 @@ if(BUILD_DOCUMENTATION)
     set(DOXYGEN_URL "http://ftp.stack.nl/pub/users/dimitri/doxygen-${DOXYGEN_VERSION}.linux.bin.tar.gz")
   endif()
   
-  set_property(DIRECTORY PROPERTY EP_BASE ${DOXYGEN_PREFIX})
+  #set_property(DIRECTORY PROPERTY EP_BASE ${DOXYGEN_PREFIX})
   
   #if(APPLE)
   #  set(DOXYGEN_DMG "${DOXYGEN_PREFIX}/Download/Doxygen-${DOXYGEN_VERSION}.dmg")

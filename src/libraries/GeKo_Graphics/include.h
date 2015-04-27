@@ -1,5 +1,4 @@
-#ifndef __DEFS_H
-#define __DEFS_H
+#pragma once
 
 #include <vector>
 #include <iostream>
@@ -14,13 +13,36 @@
 #include <glm/gtc/type_ptr.hpp>
 #include <glm/gtc/matrix_inverse.hpp>
 
-#include "Renderer.h"
-#include "Window.h"
-#include "Shader.h"
-#include "FBO.h"
-#include "Node.h"
-#include "Scenegraph.h"
-#include "UniformManager.h"
+#include <GeKo_Graphics/Renderer/Renderer.h>
+#include <GeKo_Graphics/Window.h>
+#include <GeKo_Graphics/Buffer.h>
+#include <GeKo_Graphics/BufferIndex.h>
+
+#include <GeKo_Graphics/Shader/Shader.h>
+#include <GeKo_Graphics/Shader/ShaderManager.h>
+#include <GeKo_Graphics/Shader/FBO.h>
+
+#include <GeKo_Graphics/Camera/Camera.h>
+#include <GeKo_Graphics/Camera/Pilotview.h>
+#include <GeKo_Graphics/Camera/Trackball.h>
+
+#include <GeKo_Graphics/Material/Texture.h>
+
+#include <GeKo_Graphics/Light/ConeLight.h>
+#include <GeKo_Graphics/Light/DirectionLight.h>
+#include <GeKo_Graphics/Light/PointLight.h>
+
+#include <GeKo_Graphics/GeometryInclude.h>
+
+#include <GeKo_Graphics/Scenegraph/Level.h>
+#include <GeKo_Graphics/Scenegraph/Scene.h>
+#include <GeKo_Graphics/Scenegraph/Node.h>
+#include <GeKo_Graphics/Scenegraph/Scenegraph.h>
+
+#include <GeKo_Gameplay/Input/InputHandler.h>
+#include <GeKo_Gameplay/Input/InputMap.h>
+#include <GeKo_Gameplay/Input/MapPilotview.h>
+#include <GeKo_Gameplay/Input/MapTrackball.h>
 
 
 #define VERTICES 0
@@ -64,5 +86,3 @@
 
 //FBO
 #define INVALID_OGL_VALUE 0xFFFFFFFF
-
-#endif

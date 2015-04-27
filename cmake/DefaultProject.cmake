@@ -13,13 +13,19 @@ include(${CMAKE_MODULE_PATH}/getOpenGL3.cmake)
 include(${CMAKE_MODULE_PATH}/getGLEW.cmake)
 include(${CMAKE_MODULE_PATH}/getGLFW3.cmake)
 include(${CMAKE_MODULE_PATH}/getGLM.cmake)
-include(${CMAKE_MODULE_PATH}/getASSIMP.cmake) 
+#include(${CMAKE_MODULE_PATH}/getASSIMP.cmake)
+include(${CMAKE_MODULE_PATH}/FindASSIMP.cmake)
 include(${CMAKE_MODULE_PATH}/getSTB.cmake)
+include(${CMAKE_MODULE_PATH}/getOpenAL.cmake)
+include(${CMAKE_MODULE_PATH}/getIMGUI.cmake)
+include(${CMAKE_MODULE_PATH}/getTinyXML.cmake)
+
+#include(${CMAKE_MODULE_PATH}/getIntelTBB.cmake)
+
 
 if("${CMAKE_SYSTEM}" MATCHES "Linux")
 	find_package(X11)
-	set(ALL_LIBRARIES ${ALL_LIBRARIES} ${X11_LIBRARIES} Xrandr Xxf86vm Xi pthread Xcursor Xinerama)
-	
+	set(ALL_LIBRARIES ${ALL_LIBRARIES} ${X11_LIBRARIES} Xrandr Xxf86vm Xi pthread Xcursor Xinerama assimp)
 endif()
 
 

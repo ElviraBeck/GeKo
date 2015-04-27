@@ -1,7 +1,6 @@
-#ifndef WINDOW_H
-#define WINDOW_H
+#pragma once
 
-#include "Defs.h"
+#include <GeKo_Graphics/Defs.h>
 
 /*
 Need more Information
@@ -9,10 +8,10 @@ Need more Information
 class Window
 {
 public:
-	Window(int xpos, int ypos, int height, int width, const char* name);
+	Window(int xpos, int ypos, int height, int width, const char* name, glm::vec3 color = glm::vec3(0.0,0.0,0.0));
 	~Window();
 	GLFWwindow* getWindow();
-	void update();
+	void swapAndPoll();
 	void close();
 
 	void setName(const char* name);
@@ -25,6 +24,8 @@ public:
 	int getXpos();
 	void setYpos(int ypos);
 	int getYpos();
+	void setColor(glm::vec3 color);
+	glm::vec3 getColor();
 private:
 	GLFWwindow* m_window;
 	const char* m_name;
@@ -32,5 +33,5 @@ private:
 	int m_height;
 	int m_xpos;
 	int m_ypos;
+	glm::vec3 m_color;
 };
-#endif

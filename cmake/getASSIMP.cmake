@@ -33,27 +33,41 @@ IF (MINGW)
 
 ELSEIF (MSVC)
 
-        #set(ASSIMP_INCLUDE_PATH "${CMAKE_SOURCE_DIR}/assimp/src/assimp/include")
-        set(ASSIMP_INCLUDE_PATH "${CMAKE_SOURCE_DIR}/dependencies/assimp/include/")
-        set(ASSIMP_LIB "${CMAKE_SOURCE_DIR}/dependencies/assimp/lib/assimp_release-dll_win32/assimp.lib")
-
+    set(ASSIMP_INCLUDE_PATH "${CMAKE_SOURCE_DIR}/dependencies/assimp/include/")
+	
+	if(CMAKE_BUILD_TYPE MATCHES Debug)
+	
+		if(CMAKE_SIZEOF_VOID_P EQUAL 8)
+			set(ASSIMP_LIB "${CMAKE_SOURCE_DIR}/dependencies/assimp/lib/debug/32bit/assimp.lib")
+		else()
+			set(ASSIMP_LIB "${CMAKE_SOURCE_DIR}/dependencies/assimp/lib/debug/64bit/assimp.lib")
+		endif()
+	
+	else()
+	
+		if(CMAKE_SIZEOF_VOID_P EQUAL 8)
+			set(ASSIMP_LIB "${CMAKE_SOURCE_DIR}/dependencies/assimp/lib/release/32bit/assimp.lib")
+		else()
+			set(ASSIMP_LIB "${CMAKE_SOURCE_DIR}/dependencies/assimp/lib/release/64bit/assimp.lib")
+		endif()
+	
+	endif()
+	
+	
 	
 ELSEIF(APPLE)
 
-        #set(ASSIMP_INCLUDE_PATH "${CMAKE_SOURCE_DIR}/glfw/src/glfw/include")
+    #set(ASSIMP_INCLUDE_PATH "${CMAKE_SOURCE_DIR}/glfw/src/glfw/include")
 
 ELSEIF("${CMAKE_SYSTEM}" MATCHES "Linux")
 	
-        #set(ASSIMP_INCLUDE_PATH "${CMAKE_SOURCE_DIR}/assimp/src/assimp/include")
+  #set(ASSIMP_INCLUDE_PATH "${CMAKE_SOURCE_DIR}/dependencies/assimp_linux/include")
+  #set(ASSIMP_LIB "${CMAKE_SOURCE_DIR}/dependencies/assimp/libMinGW/libassimp.a")
 
-        #FIND_PATH(ASSIMP_INCLUDE_PATH assimp/defs.h)
-        #FIND_LIBRARY(ASSIMP_LIBRARY
-        #        NAMES assimp
-        #        PATH_SUFFIXES dynamic)
-	#set(ASSIMP_LIB "${ASSIMP_LIBRARY}")
-
- 	set(ASSIMP_INCLUDE_PATH "${CMAKE_SOURCE_DIR}/dependencies/assimp/include/")
-	set(ASSIMP_LIB "${CMAKE_SOURCE_DIR}/dependencies/assimp/libMinGW/libassimp.a")
+  set(ASSIMP_INCLUDE_PATH "${CMAKE_SOURCE_DIR}/dependencies/assimp/include/")
+  FIND_LIBRARY(ASSIMP_LIBRARY
+       NAMES assimp
+	)
 
 #ELSE()
 
