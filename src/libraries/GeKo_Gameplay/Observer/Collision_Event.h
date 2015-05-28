@@ -1,0 +1,23 @@
+#pragma once
+#include <glm/ext.hpp>
+
+enum class Collision_Event
+{
+
+	PLANE_COLLISION,
+
+	COLLISION_DETECTED,
+
+	NO_COLLISION_DETECTED, 
+	
+	COLLISION_KI_PLAYER, 
+
+	NO_COLLISION_KI_PLAYER,
+
+	AI_STATIC_COLLISION,
+
+	PLAYER_STATIC_COLLISION,
+
+	COLLISION_AI_FIGHT_PLAYER
+
+};

@@ -1,0 +1,41 @@
+<Effect>
+    <Emitter>
+        <OutputType>0</OutputType>
+        <Position x="-0.2" y="0.2" z="7"/>
+        <EmitterLifetime>0</EmitterLifetime>
+        <EmitFrequency>0.10000000149011612</EmitFrequency>
+        <ParticlesPerEmit>2</ParticlesPerEmit>
+        <ParticleLiftime>10</ParticleLiftime>
+        <ParticleMortal>1</ParticleMortal>
+        <UseGeometryShader>1</UseGeometryShader>
+        <Movable>0</Movable>
+        <StartTime>0</StartTime>
+        <Velocity>0</Velocity>
+        <Physic>
+            <SwarmCircleMotion>
+                <MovementVertical>1</MovementVertical>
+                <MovementHorizontalX>1</MovementHorizontalX>
+                <MovementHorizontalZ>1</MovementHorizontalZ>
+                <Speed>3</Speed>
+            </SwarmCircleMotion>
+        </Physic>
+        <AreaEmitter on="1">
+            <AreaXY>1</AreaXY>
+            <AreaXZ>0</AreaXZ>
+            <Size>2.5</Size>
+            <Accuracy>1000</Accuracy>
+        </AreaEmitter>
+        <Texture>
+            <Tex time="1">/ParticleSystem/particle/virus.png</Tex>
+            <Size>
+                <UseTexture>1</UseTexture>
+                <ParticleSize>0.02</ParticleSize>
+                <BirthTime>1</BirthTime>
+                <DeathTime>3</DeathTime>
+                <BlendingTime>0</BlendingTime>
+                <RotateLeft>1</RotateLeft>
+                <RotationSpeed>1</RotationSpeed>
+            </Size>
+        </Texture>
+    </Emitter>
+</Effect>

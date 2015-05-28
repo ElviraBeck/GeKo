@@ -1,0 +1,38 @@
+<Effect>
+    <Emitter>
+        <OutputType>0</OutputType>
+        <Position x="0" y="0" z="1"/>
+        <EmitterLifetime>0</EmitterLifetime>
+        <EmitFrequency>0.10000000149011612</EmitFrequency>
+        <ParticlesPerEmit>5</ParticlesPerEmit>
+        <ParticleLiftime>3</ParticleLiftime>
+        <ParticleMortal>1</ParticleMortal>
+        <UseGeometryShader>0</UseGeometryShader>
+        <Movable>0</Movable>
+        <StartTime>0</StartTime>
+        <Velocity>5</Velocity>
+        <Physic>
+            <PointGravity>
+                <Point x="0" y="0" z="0"/>
+                <GravityImpact>2</GravityImpact>
+                <Speed>2.8</Speed>
+                <GravityRange>8</GravityRange>
+                <GravityFunction>2</GravityFunction>
+                <BackToSource>1</BackToSource>
+            </PointGravity>
+        </Physic>
+        <AreaEmitter on="0"/>
+        <Texture>
+            <Tex time="1">/ParticleSystem/particle/energy.png</Tex>
+            <Size>
+                <UseTexture>1</UseTexture>
+                <ParticleSize>0.1</ParticleSize>
+                <BirthTime>0</BirthTime>
+                <DeathTime>0</DeathTime>
+                <BlendingTime>0</BlendingTime>
+                <RotateLeft>0</RotateLeft>
+                <RotationSpeed>0</RotationSpeed>
+            </Size>
+        </Texture>
+    </Emitter>
+</Effect>

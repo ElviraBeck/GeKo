@@ -1,5 +1,4 @@
-#ifndef __DEFS_H
-#define __DEFS_H
+#pragma once
 
 #include <vector>
 #include <iostream>
@@ -57,4 +56,3 @@
 //FBO
 #define INVALID_OGL_VALUE 0xFFFFFFFF
 
-#endif

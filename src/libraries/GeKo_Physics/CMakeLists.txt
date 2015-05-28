@@ -1,0 +1,34 @@
+cmake_minimum_required(VERSION 2.8)
+include(${CMAKE_MODULE_PATH}/DefaultLibrary.cmake)
+
+file(GLOB_RECURSE HEADER *.h)
+file(GLOB_RECURSE CPP *.cpp)
+SOURCE_GROUP(" " FILES 	${HEADER} ${CPP})
+
+MACRO(SUBDIRLIST result curdir)
+  FILE(GLOB children RELATIVE ${curdir} ${curdir}/*)
+  SET(dirlist "")
+  FOREACH(child ${children})
+    IF(IS_DIRECTORY ${curdir}/${child})
+        LIST(APPEND dirlist ${child})
+    ENDIF()
+  ENDFOREACH()
+  SET(${result} ${dirlist})
+ENDMACRO()
+
+SUBDIRLIST(SUBDIRS ${CMAKE_CURRENT_SOURCE_DIR})
+
+FOREACH(DIR ${SUBDIRS})
+	LIST(APPEND SUBFOLDERS_LIST
+				${DIR}
+		)
+ENDFOREACH()
+	
+FOREACH(SUBFOLDERS_NAME ${SUBFOLDERS_LIST})
+
+	file(GLOB_RECURSE HEADER ${SUBFOLDERS_NAME}/*.h)
+	file(GLOB_RECURSE CPP ${SUBFOLDERS_NAME}/*.cpp)
+	file(GLOB_RECURSE HPP ${SUBFOLDERS_NAME}/*.hpp)
+	SOURCE_GROUP(${SUBFOLDERS_NAME} FILES ${HEADER} ${CPP} ${HPP})
+
+ENDFOREACH(SUBFOLDERS_NAME)

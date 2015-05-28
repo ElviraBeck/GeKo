@@ -1,0 +1,113 @@
+#version 430 core
+
+//TODO - komplette Überarbeitung mit der fertigen Version
+
+layout(std430, binding=0) buffer position_ssbo
+{
+	vec4 positions[];
+};
+
+layout(std430, binding=1) buffer velocity_ssbo
+{
+	vec4 velocity[];
+};
+
+layout(std430, binding=2) buffer angle_ssbo
+{
+	vec4 angle[];
+};
+
+#define PI 3.14159
+
+uniform float deltaTime;
+uniform vec3 emitterPos;
+uniform vec4 gravity;
+uniform float gravityRange;
+uniform float fullLifetime;
+uniform int useTrajectory;
+uniform int usePointGravity;
+uniform int useDirection;
+uniform int useAntiGravitation;
+uniform int gravityFunc;
+
+layout(local_size_x = 16, local_size_y = 1, local_size_z = 1) in;
+
+void main(){
+	uint gid = gl_GlobalInvocationID.x;
+
+	//our data
+	vec4 pos = positions[gid];
+	vec4 vel = velocity[gid];
+	vec4 ang = angle[gid];
+	float remainLifetime = pos.w;
+	float lifetime = fullLifetime - remainLifetime;
+	float speed = vel.w;
+	float gravityStrength = gravity.w;
+	float phi = ang.x;
+	float theta = ang.y;
+
+	if (remainLifetime >0){
+	
+		/* trajectory aka schiefer wurf, we assume that gravity direction is 0/-1/0. The scattering angle of the particle is influenced by theta, gravity and speed 
+		   If gravityStrengt is positive, the particles will fall, otherwise they will rise*/
+		if(useTrajectory == 1){
+
+			//transform from degree to radian
+			phi = radians(ang.x);
+			theta = radians(ang.y);
+
+			//set the new position
+			float tempPos = speed * cos(theta) * lifetime; //horizontal position in 2d
+			pos.x = tempPos * sin(phi); //"transform" to 3d
+			pos.z = tempPos * cos(phi); //"transform" to 3d
+			pos.y = speed * sin(theta) * lifetime + 0.5 * (-gravityStrength) * pow(lifetime, 2.0); //vertical position in 2d/3d
+		}
+		/*Gravity is intepreted as a position and not a direction.*/
+		else if(usePointGravity == 1){
+
+			vec3 distance = normalize(gravity.xyz - pos.xyz);
+			float distanceValue = length(distance);
+
+			float distanceFactor = min(max(gravityRange - distanceValue,0), 1);
+			vel = vec4((vel.x + (distance.x * gravityStrength * 10 * deltaTime))/1.01,
+						(vel.y + (distance.y * gravityStrength * 10 * deltaTime))/1.01,
+						(vel.z + (distance.z * gravityStrength * 10 * deltaTime))/1.01,
+						vel.w);
+
+			vel = vec4(normalize(vel.xyz), vel.w);
+
+			pos = vec4(	pos.x + vel.x * speed * distanceFactor * deltaTime, 
+						pos.y + vel.y * speed * distanceFactor * deltaTime, 
+						pos.z + vel.z * speed * distanceFactor * deltaTime, 
+						pos.w);				 
+		}
+		/*DirectionGravity. Speed is constant, particles fly to a direction*/
+		else if(useDirection == 1){
+			pos = vec4(	pos.x + vel.x * speed * deltaTime, 
+						pos.y + vel.y * speed * deltaTime, 
+						pos.z + vel.z * speed * deltaTime, 
+						pos.w);
+
+			vel = vec4( vel.x + gravity.x * gravityStrength * deltaTime,
+						vel.y + gravity.y * gravityStrength * deltaTime,
+						vel.z + gravity.z * gravityStrength * deltaTime,
+						vel.w);
+			vel = vec4(normalize(vel.xyz), vel.w);
+		}
+		/**/
+		else if(useAntiGravitation == 1){
+			//TODO
+		}
+
+		//set remainLifetime
+		pos.w -= deltaTime;
+
+		//sync
+		positions[gid] = pos;
+		velocity[gid] = vel;
+	}
+	else
+	{
+		positions[gid] = vec4(emitterPos, -1.0);
+	}
+}

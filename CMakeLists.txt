@@ -2,6 +2,7 @@ if(MSVC)
   option(USE_MINGW "USE MINGW COMPILER" OFF)
 
   if(USE_MINGW)
+	SET(CMAKE_C_COMPILER C:/MinGW/bin/gcc.exe CACHE PATH "If different: Replace this path with your MINGW g++.exe Path")
 	SET(CMAKE_CXX_COMPILER C:/MinGW/bin/g++.exe CACHE PATH "If different: Replace this path with your MINGW g++.exe Path")
   endif()
 

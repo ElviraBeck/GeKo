@@ -1,0 +1,38 @@
+<Effect>
+    <Emitter>
+        <OutputType>0</OutputType>
+        <Position x="0" y="0" z="0"/>
+        <EmitterLifetime>0</EmitterLifetime>
+        <EmitFrequency>1</EmitFrequency>
+        <ParticlesPerEmit>100</ParticlesPerEmit>
+        <ParticleLiftime>1</ParticleLiftime>
+        <ParticleMortal>1</ParticleMortal>
+        <UseGeometryShader>0</UseGeometryShader>
+        <Movable>0</Movable>
+        <StartTime>0</StartTime>
+        <Velocity>0</Velocity>
+        <Physic>
+            <DirectionGravity>
+                <Gravity x="0" y="-1" z="0" w="1"/>
+                <Speed>0</Speed>
+            </DirectionGravity>
+        </Physic>
+        <AreaEmitter on="1">
+            <AreaXY>1</AreaXY>
+            <AreaXZ>1</AreaXZ>
+            <Size>0.5</Size>
+            <Accuracy>1</Accuracy>
+        </AreaEmitter>
+        <Texture>
+            <Size>
+                <UseTexture>0</UseTexture>
+                <ParticleSize>0.1</ParticleSize>
+                <BirthTime>0</BirthTime>
+                <DeathTime>0</DeathTime>
+                <BlendingTime>0</BlendingTime>
+                <RotateLeft>0</RotateLeft>
+                <RotationSpeed>0</RotationSpeed>
+            </Size>
+        </Texture>
+    </Emitter>
+</Effect>

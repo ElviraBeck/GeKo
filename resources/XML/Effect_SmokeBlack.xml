@@ -1,0 +1,46 @@
+<Effect>
+    <Emitter>
+        <OutputType>0</OutputType>
+        <Position x="0" y="0" z="0"/>
+        <EmitterLifetime>0</EmitterLifetime>
+        <EmitFrequency>0.60000002384185791</EmitFrequency>
+        <ParticlesPerEmit>1</ParticlesPerEmit>
+        <ParticleLiftime>8</ParticleLiftime>
+        <ParticleMortal>1</ParticleMortal>
+        <UseGeometryShader>1</UseGeometryShader>
+        <Movable>0</Movable>
+        <StartTime>0</StartTime>
+        <Velocity>2</Velocity>
+        <Physic>
+            <DirectionGravity>
+                <Gravity x="0" y="-1" z="0" w="-0.80000001"/>
+                <Speed>0.30000001</Speed>
+            </DirectionGravity>
+        </Physic>
+        <AreaEmitter on="0"/>
+        <Texture>
+            <Tex time="1">/ParticleSystem/smoke/smokeBlack/smokeBlack01.png</Tex>
+            <Tex time="0.2">/ParticleSystem/smoke/smokeBlack/smokeBlack02.png</Tex>
+            <Scaling>
+                <UseTexture>1</UseTexture>
+                <ScalingSize>
+                    <Item>0.1</Item>
+                    <Item>0.40000001</Item>
+                    <Item>0.80000001</Item>
+                    <Item>1.2</Item>
+                </ScalingSize>
+                <ScalingMoment>
+                    <Item>0</Item>
+                    <Item>0.2</Item>
+                    <Item>0.75</Item>
+                    <Item>1</Item>
+                </ScalingMoment>
+                <BirthTime>1</BirthTime>
+                <DeathTime>5</DeathTime>
+                <BlendingTime>3</BlendingTime>
+                <RotateLeft>0</RotateLeft>
+                <RotationSpeed>0.30000001</RotationSpeed>
+            </Scaling>
+        </Texture>
+    </Emitter>
+</Effect>

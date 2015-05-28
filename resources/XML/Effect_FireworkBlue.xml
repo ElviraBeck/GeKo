@@ -1,0 +1,74 @@
+<Effect>
+    <Emitter>
+        <OutputType>0</OutputType>
+        <Position x="0" y="0" z="0"/>
+        <EmitterLifetime>2</EmitterLifetime>
+        <EmitFrequency>0.0099999997764825821</EmitFrequency>
+        <ParticlesPerEmit>20</ParticlesPerEmit>
+        <ParticleLiftime>0.5</ParticleLiftime>
+        <ParticleMortal>1</ParticleMortal>
+        <UseGeometryShader>0</UseGeometryShader>
+        <Movable>0</Movable>
+        <StartTime>0</StartTime>
+        <Velocity>5</Velocity>
+        <Physic>
+            <PointGravity>
+                <Point x="0" y="-4" z="0"/>
+                <GravityImpact>30.6</GravityImpact>
+                <Speed>0.2</Speed>
+                <GravityRange>10</GravityRange>
+                <GravityFunction>2</GravityFunction>
+                <BackToSource>1</BackToSource>
+            </PointGravity>
+        </Physic>
+        <AreaEmitter on="0"/>
+        <Texture>
+            <Tex time="1">/ParticleSystem/firework/firework_tail.png</Tex>
+            <Size>
+                <UseTexture>1</UseTexture>
+                <ParticleSize>0.001</ParticleSize>
+                <BirthTime>0</BirthTime>
+                <DeathTime>0.1</DeathTime>
+                <BlendingTime>0</BlendingTime>
+                <RotateLeft>0</RotateLeft>
+                <RotationSpeed>0</RotationSpeed>
+            </Size>
+        </Texture>
+    </Emitter>
+    <Emitter>
+        <OutputType>0</OutputType>
+        <Position x="0" y="0" z="0"/>
+        <EmitterLifetime>0.10000000000000001</EmitterLifetime>
+        <EmitFrequency>0.0099999997764825821</EmitFrequency>
+        <ParticlesPerEmit>80</ParticlesPerEmit>
+        <ParticleLiftime>2</ParticleLiftime>
+        <ParticleMortal>1</ParticleMortal>
+        <UseGeometryShader>0</UseGeometryShader>
+        <Movable>0</Movable>
+        <StartTime>2</StartTime>
+        <Velocity>6</Velocity>
+        <Physic>
+            <PointGravity>
+                <Point x="0" y="-2" z="0"/>
+                <GravityImpact>0.89999998</GravityImpact>
+                <Speed>2</Speed>
+                <GravityRange>5</GravityRange>
+                <GravityFunction>2</GravityFunction>
+                <BackToSource>1</BackToSource>
+            </PointGravity>
+        </Physic>
+        <AreaEmitter on="0"/>
+        <Texture>
+            <Tex time="1">/ParticleSystem/firework/firework_blue.png</Tex>
+            <Size>
+                <UseTexture>1</UseTexture>
+                <ParticleSize>0.039999999</ParticleSize>
+                <BirthTime>0</BirthTime>
+                <DeathTime>0.5</DeathTime>
+                <BlendingTime>0</BlendingTime>
+                <RotateLeft>0</RotateLeft>
+                <RotationSpeed>0</RotationSpeed>
+            </Size>
+        </Texture>
+    </Emitter>
+</Effect>

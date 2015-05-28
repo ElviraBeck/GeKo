@@ -1,0 +1,35 @@
+<Effect>
+    <Emitter>
+        <OutputType>0</OutputType>
+        <Position x="0" y="0" z="0"/>
+        <EmitterLifetime>0</EmitterLifetime>
+        <EmitFrequency>0.20000000298023224</EmitFrequency>
+        <ParticlesPerEmit>50</ParticlesPerEmit>
+        <ParticleLiftime>4</ParticleLiftime>
+        <ParticleMortal>1</ParticleMortal>
+        <UseGeometryShader>1</UseGeometryShader>
+        <Movable>0</Movable>
+        <StartTime>0</StartTime>
+        <Velocity>4</Velocity>
+        <Physic>
+            <DirectionGravity>
+                <Gravity x="0" y="-1" z="0" w="-0"/>
+                <Speed>0.30000001</Speed>
+            </DirectionGravity>
+        </Physic>
+        <AreaEmitter on="0"/>
+        <Texture>
+            <Tex time="1">/ParticleSystem/particle/sparkOrange.png</Tex>
+            <Tex time="0.1">/ParticleSystem/particle/sparkRed.png</Tex>
+            <Size>
+                <UseTexture>1</UseTexture>
+                <ParticleSize>0.029999999</ParticleSize>
+                <BirthTime>0</BirthTime>
+                <DeathTime>2</DeathTime>
+                <BlendingTime>1</BlendingTime>
+                <RotateLeft>1</RotateLeft>
+                <RotationSpeed>0</RotationSpeed>
+            </Size>
+        </Texture>
+    </Emitter>
+</Effect>

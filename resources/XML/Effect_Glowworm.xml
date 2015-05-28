@@ -1,0 +1,41 @@
+<Effect>
+    <Emitter>
+        <OutputType>0</OutputType>
+        <Position x="0" y="0" z="0"/>
+        <EmitterLifetime>0</EmitterLifetime>
+        <EmitFrequency>0.20000000298023224</EmitFrequency>
+        <ParticlesPerEmit>1</ParticlesPerEmit>
+        <ParticleLiftime>10</ParticleLiftime>
+        <ParticleMortal>1</ParticleMortal>
+        <UseGeometryShader>0</UseGeometryShader>
+        <Movable>0</Movable>
+        <StartTime>0</StartTime>
+        <Velocity>0</Velocity>
+        <Physic>
+            <SwarmCircleMotion>
+                <MovementVertical>1</MovementVertical>
+                <MovementHorizontalX>1</MovementHorizontalX>
+                <MovementHorizontalZ>1</MovementHorizontalZ>
+                <Speed>3</Speed>
+            </SwarmCircleMotion>
+        </Physic>
+        <AreaEmitter on="1">
+            <AreaXY>1</AreaXY>
+            <AreaXZ>0</AreaXZ>
+            <Size>0.40000001</Size>
+            <Accuracy>1000</Accuracy>
+        </AreaEmitter>
+        <Texture>
+            <Tex time="1">/ParticleSystem/particle/glowworm.png</Tex>
+            <Size>
+                <UseTexture>1</UseTexture>
+                <ParticleSize>0.1</ParticleSize>
+                <BirthTime>1</BirthTime>
+                <DeathTime>1.5</DeathTime>
+                <BlendingTime>0</BlendingTime>
+                <RotateLeft>0</RotateLeft>
+                <RotationSpeed>0</RotationSpeed>
+            </Size>
+        </Texture>
+    </Emitter>
+</Effect>

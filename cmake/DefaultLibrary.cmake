@@ -11,19 +11,24 @@ include_directories(
     ${GLM_INCLUDE_PATH}
 	${ASSIMP_INCLUDE_PATH}
 	${STB_INCLUDE_PATH}
+	${OPENAL_INCLUDE_PATH}
+	${IMGUI_INCLUDE_PATH}
+	#${TBB_INCLUDE_PATH}
+	${TinyXML_INCLUDE_PATH}
     ${EXTERNAL_LIBRARY_PATHS}
     ${CMAKE_SOURCE_DIR}/src/libraries/
 )
 
 file(GLOB_RECURSE SOURCES *.cpp)
 file(GLOB_RECURSE HEADER *.h)
+file(GLOB_RECURSE HPP *.hpp)
 
 add_definitions(-DSHADERS_PATH="${SHADERS_PATH}")
 add_definitions(-DRESOURCES_PATH="${RESOURCES_PATH}")
 add_definitions(-DGLFW_INCLUDE_GLCOREARB)
 add_definitions(-DGL_DO_NOT_WARN_IF_MULTI_GL_VERSION_HEADERS_INCLUDED)
 
-add_library(${ProjectId} ${SOURCES} ${HEADER})
+add_library(${ProjectId} ${SOURCES} ${HEADER} ${HPP})
 
 #Link to library files
 target_link_libraries(
@@ -33,6 +38,9 @@ target_link_libraries(
     ${GLEW_LIB}
     ${OpenGL3_LIB}
 	${ASSIMP_LIB}
+	${OPENAL_LIB}
+	#${TBB_LIB}
+	${TinyXML_LIB}
 )
 
 #Used to delay in build order
@@ -41,5 +49,8 @@ add_dependencies(
 	glew
 	glfw
 	glm
-	assimp
+	OpenAL
+	imgui
+	TinyXML
+	#TBB
 )

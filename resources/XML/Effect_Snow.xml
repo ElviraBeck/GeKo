@@ -1,0 +1,39 @@
+<Effect>
+    <Emitter>
+        <OutputType>0</OutputType>
+        <Position x="0" y="5" z="0"/>
+        <EmitterLifetime>0</EmitterLifetime>
+        <EmitFrequency>0.16599999368190765</EmitFrequency>
+        <ParticlesPerEmit>100</ParticlesPerEmit>
+        <ParticleLiftime>30</ParticleLiftime>
+        <ParticleMortal>1</ParticleMortal>
+        <UseGeometryShader>0</UseGeometryShader>
+        <Movable>1</Movable>
+        <StartTime>0</StartTime>
+        <Velocity>0</Velocity>
+        <Physic>
+            <DirectionGravity>
+                <Gravity x="0" y="-1" z="0" w="1"/>
+                <Speed>0.5</Speed>
+            </DirectionGravity>
+        </Physic>
+        <AreaEmitter on="1">
+            <AreaXY>0</AreaXY>
+            <AreaXZ>1</AreaXZ>
+            <Size>10</Size>
+            <Accuracy>10000</Accuracy>
+        </AreaEmitter>
+        <Texture>
+            <Tex time="1">/ParticleSystem/particle/snowflake.png</Tex>
+            <Size>
+                <UseTexture>1</UseTexture>
+                <ParticleSize>0.039999999</ParticleSize>
+                <BirthTime>2</BirthTime>
+                <DeathTime>0</DeathTime>
+                <BlendingTime>0</BlendingTime>
+                <RotateLeft>0</RotateLeft>
+                <RotationSpeed>0</RotationSpeed>
+            </Size>
+        </Texture>
+    </Emitter>
+</Effect>
